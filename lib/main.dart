@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -34,7 +35,7 @@ class _DicePageState extends State<DicePage> {
               child: FlatButton(
                 onPressed: () {
                   setState(() {
-                    leftDiceNumber = 3;
+                    leftDiceNumber = 1 + Random().nextInt(5);
                     print(' Left button get pressed ');
                   });
                 },
@@ -47,7 +48,10 @@ class _DicePageState extends State<DicePage> {
               padding: const EdgeInsets.all(16.0),
               child: FlatButton(
                 onPressed: () {
-                  print(' Right button get pressed ');
+                  setState(() {
+                    rightDiceNumber = 1 + Random().nextInt(5);
+                    print(' Right button get pressed ');
+                  });
                 },
                 child: Image.asset('images/dice$rightDiceNumber.png'),
               ),
