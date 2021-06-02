@@ -36,6 +36,7 @@ class _DicePageState extends State<DicePage> {
                 onPressed: () {
                   setState(() {
                     leftDiceNumber = 1 + Random().nextInt(5);
+                    rightDiceNumber = 1 + Random().nextInt(5);
                     print(' Left button get pressed ');
                   });
                 },
@@ -49,6 +50,7 @@ class _DicePageState extends State<DicePage> {
               child: FlatButton(
                 onPressed: () {
                   setState(() {
+                    leftDiceNumber = 1 + Random().nextInt(5);
                     rightDiceNumber = 1 + Random().nextInt(5);
                     print(' Right button get pressed ');
                   });
